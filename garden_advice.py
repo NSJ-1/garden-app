@@ -48,10 +48,15 @@ def recommend_plants(season):
 
 def main():
     """Run the gardening advice program."""
-    #Hardcoded values are kept for now.
-    #These will be replaced with Issue 2.
-    season = "summer"
-    plant_type = "flower"
+
+    #Ask the user for the season and plant type.
+    season = input(
+        "Enter a season (summer, winter, spring, autumn):"
+    ).lower()
+
+    plant_type = input(
+        "Enter a plant type (flower, vegetable, herb): "
+    ).lower()
 
     #Get advice
     season_message = get_season_advice(season)
